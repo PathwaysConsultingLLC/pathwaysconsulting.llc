@@ -1,639 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathways Consulting LLC — Community-Centered Practice</title>
-    <meta name="description" content="Pathways Consulting LLC works with humanitarian, development, and philanthropic organizations on program evaluation, gender analysis, and community-centered practice.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            color: #2c2c2c;
-            background: #faf8f5;
-            line-height: 1.7;
-            font-size: 16px;
-        }
+  <title>Anab Mohamed | Founder, Pathways Consulting LLC</title>
+  <meta name="description" content="Founder-led consulting for localization, systems change, facilitation, research, learning, grant strategy, and ethical global development practice." />
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(247, 245, 242, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e0dcd6;
-            z-index: 1000;
-            padding: 0 2rem;
-        }
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --sage: #A4AC96;
+      --black: #000000;
+      --forest: #244136;
+      --cream: #FFFFF5;
+      --eucalyptus: #506b5e;
+      --bronze: #977855;
 
-        nav ul {
-            max-width: 800px;
-            margin: 0 auto;
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            padding: 1.2rem 0;
-            flex-wrap: wrap;
-        }
+      --soft-border: rgba(164, 172, 150, 0.55);
+      --card-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+      --bronze-soft: rgba(151, 120, 85, 0.15);
+      --sage-soft: rgba(164, 172, 150, 0.22);
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #5a5a5a;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        nav a:hover {
-            color: #8b6914;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6rem 2rem 4rem;
-            background: #f7f5f2;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.65;
+    }
 
-        .hero-content {
-            max-width: 700px;
-        }
+    a {
+      color: var(--forest);
+      text-underline-offset: 4px;
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
+    a:hover {
+      color: var(--bronze);
+    }
 
-        .hero .tagline {
-            font-size: 1.15rem;
-            color: #5a5a5a;
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 245, 0.94);
+      border-bottom: 1px solid var(--soft-border);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+    }
 
-        .hero p {
-            font-size: 1.05rem;
-            color: #5a5a5a;
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-        }
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-        .hero .cta {
-            display: inline-block;
-            padding: 0.9rem 2.5rem;
-            border: 1.5px solid #2c2c2c;
-            color: #2c2c2c;
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: all 0.3s;
-        }
+    .brand {
+      text-decoration: none;
+      color: var(--forest);
+      line-height: 1.15;
+      min-width: fit-content;
+    }
 
-        .hero .cta:hover {
-            background: #2c2c2c;
-            color: #faf8f5;
-        }
+    .brand strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
 
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .brand span {
+      display: block;
+      color: var(--eucalyptus);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 3px;
+    }
 
-        section h2 {
-            font-size: 1.6rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            letter-spacing: -0.01em;
-        }
+    .navlinks {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
 
-        section h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 2.5rem 0 1rem;
-        }
+    .navlinks a {
+      color: var(--eucalyptus);
+      text-decoration: none;
+    }
 
-        section p {
-            margin-bottom: 1.2rem;
-            color: #5a5a5a;
-        }
+    .navlinks a:hover {
+      color: var(--forest);
+    }
 
-        /* About */
-        #about {
-            background: #faf8f5;
-        }
+    .hero {
+      background:
+        radial-gradient(circle at 12% 12%, rgba(151, 120, 85, 0.28), transparent 28%),
+        linear-gradient(135deg, rgba(36, 65, 54, 0.98), rgba(36, 65, 54, 0.91)),
+        var(--forest);
+      color: var(--cream);
+      padding: 96px 24px 88px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .about-intro {
-            font-size: 1.15rem;
-            color: #2c2c2c;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -160px;
+      bottom: -180px;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 245, 0.13);
+    }
 
-        .credentials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: #f7f5f2;
-            border-left: 3px solid #8b6914;
-        }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.28fr 0.72fr;
+      gap: 48px;
+      align-items: center;
+    }
 
-        .credentials div {
-            font-size: 0.9rem;
-            color: #5a5a5a;
-        }
+    .eyebrow {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
 
-        .credentials strong {
-            color: #2c2c2c;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(2.65rem, 6vw, 5.45rem);
+      line-height: 0.98;
+      letter-spacing: -2.2px;
+      max-width: 900px;
+    }
 
-        /* Services */
-        #services {
-            background: #f7f5f2;
-        }
+    .hero-copy {
+      color: rgba(255, 255, 245, 0.92);
+      font-size: 1.16rem;
+      max-width: 780px;
+      margin-bottom: 20px;
+    }
 
-        .service {
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0dcd6;
-        }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
 
-        .service:last-child {
-            border-bottom: none;
-        }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
 
-        .service h3 {
-            margin-top: 0;
-            font-size: 1.2rem;
-            color: #2c2c2c;
-        }
+    .button:hover {
+      transform: translateY(-1px);
+    }
 
-        .service ul {
-            margin-left: 1.5rem;
-            color: #5a5a5a;
-        }
+    .button-primary {
+      background: var(--bronze);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
 
-        .service li {
-            margin-bottom: 0.5rem;
-        }
+    .button-primary:hover {
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
 
-        /* Experience */
-        #experience {
-            background: #faf8f5;
-        }
+    .button-secondary {
+      color: var(--cream);
+      border-color: rgba(255, 255, 245, 0.55);
+      background: rgba(255, 255, 245, 0.05);
+    }
 
-        .engagement {
-            margin-bottom: 2rem;
-            padding-left: 1.5rem;
-            border-left: 2px solid #e0dcd6;
-        }
+    .button-secondary:hover {
+      color: var(--cream);
+      background: rgba(255, 255, 245, 0.11);
+    }
 
-        .engagement h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #2c2c2c;
-            margin-bottom: 0.3rem;
-        }
+    .founder-panel {
+      border: 1px solid rgba(255, 255, 245, 0.22);
+      background: rgba(255, 255, 245, 0.09);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.10);
+    }
 
-        .engagement .meta {
-            font-size: 0.85rem;
-            color: #8c8c8c;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
+    .founder-panel .label {
+      color: var(--sage);
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 1.3px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
 
-        .engagement p {
-            font-size: 0.95rem;
-        }
+    .founder-panel h2 {
+      color: var(--cream);
+      margin-bottom: 14px;
+      font-size: 1.55rem;
+    }
 
-        /* Research */
-        #research {
-            background: #f7f5f2;
-        }
+    .founder-panel p {
+      color: rgba(255, 255, 245, 0.88);
+      margin-bottom: 14px;
+    }
 
-        .research-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #faf8f5;
-            border: 1px solid #e0dcd6;
-        }
+    .section {
+      padding: 78px 24px;
+    }
 
-        .research-item h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #2c2c2c;
-            margin-bottom: 0.5rem;
-        }
+    .section.alt {
+      background: var(--white);
+    }
 
-        .research-item .type {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #8b6914;
-            margin-bottom: 0.8rem;
-        }
+    .section.dark {
+      background: var(--forest);
+      color: var(--cream);
+    }
 
-        .research-item p {
-            font-size: 0.95rem;
-        }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
 
-        /* Tool */
-        #tool {
-            background: #faf8f5;
-        }
+    .section-header {
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
 
-        .tool-box {
-            padding: 2rem;
-            background: #f7f5f2;
-            border: 1px solid #e0dcd6;
-            margin-top: 1.5rem;
-        }
+    h2 {
+      color: var(--forest);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.9px;
+      margin: 0 0 16px;
+    }
 
-        .tool-box h3 {
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
+    .dark h2,
+    .dark h3 {
+      color: var(--cream);
+    }
 
-        .status {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: #8b6914;
-            color: #faf8f5;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
+    h3 {
+      color: var(--forest);
+      font-size: 1.22rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
 
-        .domains {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin: 1.5rem 0;
-        }
+    p {
+      margin-top: 0;
+    }
 
-        .domains span {
-            font-size: 0.9rem;
-            color: #5a5a5a;
-            padding-left: 1rem;
-            position: relative;
-        }
+    .lead {
+      color: var(--eucalyptus);
+      font-size: 1.13rem;
+    }
 
-        .domains span::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #8b6914;
-        }
+    .dark .lead {
+      color: rgba(255, 255, 245, 0.82);
+    }
 
-        /* Writing */
-        #writing {
-            background: #f7f5f2;
-        }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
 
-        .publication {
-            margin-bottom: 1.2rem;
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid #e0dcd6;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-        .publication:last-child {
-            border-bottom: none;
-        }
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-        .publication a {
-            color: #2c2c2c;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid #8b6914;
-            transition: color 0.3s;
-        }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--soft-border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
 
-        .publication a:hover {
-            color: #8b6914;
-        }
+    .card p,
+    .card li {
+      color: var(--eucalyptus);
+    }
 
-        .publication .venue {
-            font-size: 0.85rem;
-            color: #8c8c8c;
-            margin-top: 0.3rem;
-        }
+    .card-tag {
+      display: inline-block;
+      color: var(--forest);
+      background: var(--bronze-soft);
+      border: 1px solid rgba(151, 120, 85, 0.25);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
 
-        /* Contact */
-        #contact {
-            background: #2c2c2c;
-            color: #faf8f5;
-            text-align: center;
-            padding: 5rem 2rem;
-        }
+    .card-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--forest);
+      font-weight: 800;
+    }
 
-        #contact h2 {
-            color: #faf8f5;
-        }
+    .quote {
+      border-left: 5px solid var(--bronze);
+      padding-left: 22px;
+      color: var(--forest);
+      font-size: 1.34rem;
+      line-height: 1.45;
+      margin: 28px 0 0;
+      max-width: 900px;
+    }
 
-        #contact p {
-            color: #8c8c8c;
-            max-width: 500px;
-            margin: 0 auto 2rem;
-        }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
 
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
+    .pill {
+      background: var(--sage-soft);
+      color: var(--forest);
+      border: 1px solid rgba(164, 172, 150, 0.50);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
 
-        .contact-links a {
-            color: #faf8f5;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            border-bottom: 1px solid #8c8c8c;
-            padding-bottom: 0.2rem;
-            transition: border-color 0.3s;
-        }
+    .wordmark-card {
+      background: var(--forest);
+      color: var(--cream);
+      border-radius: 28px;
+      padding: 34px;
+      min-height: 100%;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.10);
+    }
 
-        .contact-links a:hover {
-            border-color: #a67c00;
-        }
+    .wordmark-card .name {
+      font-size: 2.2rem;
+      line-height: 1.02;
+      letter-spacing: -1px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      color: var(--cream);
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #2c2c2c;
-            border-top: 1px solid #5a5a5a;
-        }
+    .wordmark-card .company {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-bottom: 24px;
+    }
 
-        footer p {
-            font-size: 0.8rem;
-            color: #8c8c8c;
-            font-style: italic;
-        }
+    .wordmark-card p {
+      color: rgba(255, 255, 245, 0.88);
+    }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+    .contact-card {
+      background:
+        radial-gradient(circle at top right, rgba(151, 120, 85, 0.22), transparent 30%),
+        var(--forest);
+      color: var(--cream);
+      border-radius: 30px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+    }
 
-            .credentials {
-                grid-template-columns: 1fr;
-            }
+    .contact-card h2 {
+      color: var(--cream);
+    }
 
-            .domains {
-                grid-template-columns: 1fr;
-            }
+    .contact-card p {
+      color: rgba(255, 255, 245, 0.86);
+      font-size: 1.08rem;
+    }
 
-            nav ul {
-                gap: 1.2rem;
-                justify-content: center;
-            }
+    .contact-links {
+      display: grid;
+      gap: 12px;
+    }
 
-            nav a {
-                font-size: 0.75rem;
-            }
-        }
-    </style>
+    .contact-links a {
+      display: block;
+      background: rgba(255, 255, 245, 0.10);
+      border: 1px solid rgba(255, 255, 245, 0.22);
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .contact-links a:hover {
+      background: rgba(255, 255, 245, 0.16);
+      color: var(--cream);
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 0.94rem;
+    }
+
+    footer a {
+      color: var(--sage);
+    }
+
+    @media (max-width: 900px) {
+      .nav,
+      .hero-inner,
+      .split,
+      .grid,
+      .grid.two,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 58px 18px;
+      }
+
+      .hero {
+        padding: 62px 18px 66px;
+      }
+
+      .card,
+      .founder-panel,
+      .wordmark-card,
+      .contact-card {
+        padding: 24px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#tool">Diagnostic Tool</a></li>
-            <li><a href="#writing">Writing</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#" class="brand" aria-label="Pathways Consulting LLC home">
+        <strong>Pathways Consulting LLC</strong>
+        <span>Founder-led by Anab Mohamed</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Selected Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
+  <main>
     <section class="hero">
-        <div class="hero-content">
-            <h1>Pathways Consulting LLC</h1>
-            <p class="tagline">Honest inquiry for organizations serious about community-centered practice</p>
-            <p>We work with humanitarian, development, peacebuilding, and philanthropic organizations seeking to ground their work more deeply in the realities, priorities, and leadership of the communities they serve.</p>
-            <a href="#contact" class="cta">Start a Conversation</a>
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Founder-led consulting for mission-driven work</div>
+          <h1>Anab Mohamed</h1>
+          <p class="hero-copy">
+            I help nonprofits, NGOs, humanitarian actors, civil society organizations, and international
+            development partners strengthen localization, learning, strategy, facilitation, and equitable systems change.
+          </p>
+          <p class="hero-copy">
+            My work bridges community voice, human rights, research, grant strategy, ethical global clinical research,
+            and practical tools for organizations ready to rethink power, partnership, and progress.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="mailto:pathwaysconsultllc@gmail.com">Start a Conversation</a>
+            <a class="button button-secondary" href="#work">Explore Selected Work</a>
+          </div>
         </div>
+
+        <aside class="founder-panel" aria-label="Founder note">
+          <div class="label">Pathways Consulting LLC</div>
+          <h2>Locally led. Globally minded. Systemically bold.</h2>
+          <p>
+            Pathways Consulting LLC exists to help organizations move beyond language about localization
+            and toward practical ways of centering local knowledge, community agency, and sustainable systems change.
+          </p>
+          <p>
+            This work is founder-led because the lens matters: power, trust, dignity, and context are not side issues.
+            They are the work.
+          </p>
+        </aside>
+      </div>
     </section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p class="about-intro">Pathways Consulting LLC is a founder-led practice built on a straightforward belief: effective development and humanitarian work requires honest examination of how organizational practices align—or fail to align—with community-defined priorities. This means asking difficult questions about power, funding pressures, institutional habits, and the gap between rhetoric and practice.</p>
-
-        <h3>Anab Mohamed, Founder</h3>
-        <p>Anab Mohamed is a practitioner and researcher with over a decade of experience across international development, public health, and nonprofit capacity building. Her work spans gender-responsive program design, utilization-focused evaluation, workshop facilitation, and organizational learning.</p>
-        <p>She has supported organizations including Plan International, the California Department of Public Health, Root Change, and the Community Foundation for Monterey County. Her field experience includes work in Sudan and the Horn of Africa, and her analysis has appeared in Middle East Eye and other outlets.</p>
-        <p>Her earlier research on the ethics of global health research partnerships—examining the obligations of clinical research sponsors from high-income countries to low- and middle-income host communities—informs the practice's attention to equitable engagement and the structural dynamics of North-South collaboration.</p>
-
-        <div class="credentials">
-            <div>
-                <strong>Education</strong>
-                MA, International Policy & Development<br>
-                Middlebury Institute of International Studies
-            </div>
-            <div>
-                <strong>Education</strong>
-                MS, Clinical Research Administration<br>
-                Walden University
-            </div>
-            <div>
-                <strong>Education</strong>
-                BS, Molecular Cell & Developmental Biology<br>
-                University of California, Santa Cruz
-            </div>
-            <div>
-                <strong>Languages</strong>
-                Arabic (native)<br>
-                English (fluent)<br>
-                Spanish (intermediate-advanced)
-            </div>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Consulting led by a practitioner, researcher, facilitator, and systems thinker.</h2>
+          <p class="lead">
+            I support organizations navigating complexity: teams that need sharper strategy, stronger learning,
+            better funding narratives, more meaningful participation, or a clearer path toward locally led impact.
+          </p>
         </div>
+
+        <div class="split">
+          <div>
+            <p>
+              My background spans nonprofit grants management, international policy and development, human rights,
+              localization, facilitation, clinical research administration, global health ethics, and community-centered
+              program design.
+            </p>
+            <p>
+              I bring a grounded and practical approach: listening closely, mapping systems, naming power dynamics,
+              clarifying choices, and helping teams turn insight into action.
+            </p>
+
+            <p class="quote">
+              Community voice is not a checkbox. It is intelligence, evidence, power, and strategy.
+            </p>
+          </div>
+
+          <div class="wordmark-card">
+            <div class="company">Founder-led practice</div>
+            <div class="name">Pathways Consulting LLC</div>
+            <p>
+              A systems-focused, adaptive, mission-driven consulting practice built around one guiding question:
+            </p>
+            <p>
+              What would happen if the people most affected by crisis were at the center of designing the response?
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="services">
-        <h2>Services</h2>
-
-        <div class="service">
-            <h3>Program Evaluation</h3>
-            <p>Utilization-focused evaluation design that examines not only whether programs achieve their stated objectives, but how they interact with community power structures, gender dynamics, and local priorities.</p>
-            <ul>
-                <li>Mid-term and final evaluations</li>
-                <li>Theory of change and logic model development</li>
-                <li>Indicator design and measurement planning</li>
-                <li>Qualitative and mixed-methods data collection</li>
-            </ul>
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>How I can support your work</h2>
+          <p class="lead">
+            Focused consulting support for organizations seeking clarity, alignment, and more equitable impact.
+          </p>
         </div>
 
-        <div class="service">
-            <h3>Gender Analysis and Organizational Assessment</h3>
-            <p>Assessment of how gender equality and inclusion are embedded—or superficially addressed—across organizational strategy, programming, and internal culture.</p>
-            <ul>
-                <li>Gender-responsive program design support</li>
-                <li>Gender equality and inclusion self-assessments</li>
-                <li>Analysis of gender dynamics in crisis and development contexts</li>
-            </ul>
-        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="card-tag">Strategy</span>
+            <h3>Localization Strategy & Diagnostics</h3>
+            <p>
+              Assess power, partnership quality, decision-making, community voice, and readiness for more locally led practice.
+            </p>
+          </div>
 
-        <div class="service">
-            <h3>Facilitation and Capacity Building</h3>
-            <p>Design and delivery of interactive learning experiences for teams and cohorts, both in-person and digitally.</p>
-            <ul>
-                <li>Workshop design and facilitation</li>
-                <li>Learning management system support and curriculum design</li>
-                <li>Training on inclusion, equity, and community-centered outreach</li>
-            </ul>
-        </div>
+          <div class="card">
+            <span class="card-tag">Facilitation</span>
+            <h3>Strategic Facilitation & Systems Mapping</h3>
+            <p>
+              Design and facilitate reflection sessions, stakeholder mapping, empathy mapping, and systems-level learning conversations.
+            </p>
+          </div>
 
-        <div class="service">
-            <h3>Strategic Learning and Partnership Reflection</h3>
-            <p>Guided processes for organizations examining their partnerships, decision-making, and accountability to local actors.</p>
-            <ul>
-                <li>Partnership assessment and redesign</li>
-                <li>Organizational learning processes</li>
-                <li>Reflection on alignment between external agendas and community priorities</li>
-            </ul>
+          <div class="card">
+            <span class="card-tag">Learning</span>
+            <h3>Research, Evaluation & Learning</h3>
+            <p>
+              Develop learning questions, insight briefs, reflection tools, qualitative analysis, and practical knowledge products.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Funding</span>
+            <h3>Grant & Proposal Strategy</h3>
+            <p>
+              Strengthen funding narratives, align proposals with funder priorities, and clarify outcomes, activities, and impact.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Ethics</span>
+            <h3>Global Clinical Research Ethics Lens</h3>
+            <p>
+              Connect clinical research ethics, sponsor obligations, local health needs, equity, and health systems strengthening.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Advising</span>
+            <h3>Thought Partnership</h3>
+            <p>
+              Support emerging initiatives, concept notes, program ideas, localization tools, and community-centered impact models.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="experience">
-        <h2>Selected Experience</h2>
-        <p style="font-size: 0.9rem; color: #8c8c8c; font-style: italic; margin-bottom: 2rem;">Work conducted as an independent consultant or through prior institutional roles.</p>
-
-        <div class="engagement">
-            <h4>Workshop Facilitation Consultant</h4>
-            <div class="meta">Root Change / California Department of Public Health · 2022</div>
-            <p>Facilitated six interactive workshops across California on inclusion and equity in community-based outreach, in partnership with the Vaccinate All 58 Campaign.</p>
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <h2>Selected Work & Thought Leadership</h2>
+          <p class="lead">
+            A curated selection of tools, facilitation, research, and writing that shape my consulting practice
+            across localization, systems change, ethical research, and community-centered development.
+          </p>
         </div>
 
-        <div class="engagement">
-            <h4>International Development Consultant</h4>
-            <div class="meta">Plan International Sudan and other clients · Khartoum · 2020–2021</div>
-            <p>Conducted gender-responsive program design research, supported organizational gender equality assessments, and produced analysis for resiliency programming in East Sudan.</p>
-        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="card-tag">Signature Framework</span>
+            <h3>Localization Diagnostic Tool</h3>
+            <p>
+              A signature framework in development to help organizations examine power, partnership quality,
+              decision-making, community voice, and readiness for locally led practice.
+            </p>
+          </article>
 
-        <div class="engagement">
-            <h4>Program Evaluation Consultant</h4>
-            <div class="meta">Community Foundation for Monterey County · 2019</div>
-            <p>Designed and implemented a utilization-focused evaluation of a multi-year capacity-building grant program for small nonprofits.</p>
-        </div>
+          <article class="card">
+            <span class="card-tag">Humanitarian Facilitation</span>
+            <h3>Localized Leadership in Polycrisis</h3>
+            <p>
+              Designed and facilitated a 90-minute humanitarian leadership workshop using systems thinking,
+              empathy mapping, and scenario-based reflection to explore localized leadership in complex crises.
+            </p>
+          </article>
 
-        <div class="engagement">
-            <h4>LEAD Program Associate</h4>
-            <div class="meta">Community Foundation for Monterey County, Center for Nonprofit Excellence · 2019</div>
-            <p>Supported design and delivery of leadership training programs, managed learning management systems, and facilitated cohort-based learning.</p>
-        </div>
+          <article class="card">
+            <span class="card-tag">Humanitarian Research</span>
+            <h3>Information Ecosystem Research in Sudan</h3>
+            <p>
+              Supported research on how displaced and marginalized communities accessed and trusted COVID-19 information,
+              contributing to recommendations for localized communication and community engagement.
+            </p>
+          </article>
 
-        <div class="engagement">
-            <h4>Clinical Research Coordinator, Oncology</h4>
-            <div class="meta">Pacific Cancer Care · 2017–2018</div>
-            <p>Managed regulatory and technical requirements for hematology and solid tumor clinical trials.</p>
+          <article class="card">
+            <span class="card-tag">Gender & Inclusion</span>
+            <h3>Gender Equality & Inclusion Assessment</h3>
+            <p>
+              Supported an organizational gender equality and inclusion self-assessment, identifying strengths,
+              challenges, and action steps to improve institutional practice.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Equity Facilitation</span>
+            <h3>Inclusion & Equity Workshops</h3>
+            <p>
+              Facilitated six interactive workshops for community-based organizations, strengthening inclusion,
+              empathy mapping, and public health outreach practice.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Global Health Ethics</span>
+            <h3>Global Clinical Research Ethics & LMIC Health Systems</h3>
+            <p>
+              Presented and contributed to research on ethical clinical trial implementation in LMICs, examining
+              stakeholder priorities, community benefit, power dynamics, and local health needs.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Writing</span>
+            <h3>Grounding Impact</h3>
+            <p>
+              Essays and reflections on localization, systems change, humanitarian practice, community voice,
+              ethical global development, and founder-led consulting practice.
+            </p>
+            <a class="card-link" href="https://substack.com/@pathwaysconsultllc" target="_blank" rel="noopener">
+              Read on Substack
+            </a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Policy & Analysis</span>
+            <h3>Community-Centered Policy Writing</h3>
+            <p>
+              Policy and applied writing focused on human security, community agency, localized health behavior change,
+              and development practice in Sudan and beyond.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Organizational Learning</span>
+            <h3>Program Evaluation & Learning Support</h3>
+            <p>
+              Experience developing logic models, impact metrics, learning synthesis, and recommendations tailored
+              to community-based and mission-driven organizations.
+            </p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section id="research">
-        <h2>Prior Research</h2>
-
-        <div class="research-item">
-            <div class="type">Graduate Thesis</div>
-            <h4>Can Obligations of Clinical Research Sponsors from HICs Contribute to the Improvement of Healthcare Delivery in LMICs?</h4>
-            <p>MS Clinical Research Administration, Walden University. Examined ethical frameworks addressing the scope of obligations of clinical research sponsors from high-income countries to host communities in low- and middle-income countries, with attention to the 10/90 gap in global health research funding and the intersection of international clinical research with health justice.</p>
+    <section class="section alt" id="approach">
+      <div class="container">
+        <div class="section-header">
+          <h2>My approach</h2>
+          <p class="lead">
+            I combine structured consulting tools with a human, contextual, and power-aware lens.
+          </p>
         </div>
 
-        <div class="research-item">
-            <div class="type">Poster Presentation</div>
-            <h4>Leveraging International Clinical Research for Bridging Global Health Disparities</h4>
-            <p>ASCRP Expo 2017. Presented analysis of ethical debates on HIC sponsor obligations, including frameworks of reasonable availability, fair benefits, and health justice in the conduct of international clinical research.</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>Grounded in context</h3>
+            <p>
+              Strategy cannot be copied and pasted. Good work starts with listening closely to the people,
+              systems, incentives, and constraints shaping the environment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Practical, not performative</h3>
+            <p>
+              I focus on tools organizations can actually use: clearer frameworks, sharper narratives,
+              better questions, realistic action steps, and stronger internal alignment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Power-aware</h3>
+            <p>
+              Localization, equity, and participation require examining who defines the problem, who holds resources,
+              who is trusted, and who gets to decide.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Learning-oriented</h3>
+            <p>
+              I help teams turn experience into insight, insight into strategy, and strategy into grounded action.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="tool">
-        <h2>Community-Centered Localization Diagnostic Tool</h2>
-        <p>Pathways Consulting is currently developing a diagnostic framework to help organizations examine how closely their strategies, programs, and decision-making align with community-defined realities and priorities.</p>
-
-        <div class="tool-box">
-            <span class="status">In Development</span>
-            <h3>How It Works</h3>
-            <p>The tool invites organizations into a deeper process of reflection, analysis, and transformation. Rather than treating localization as a compliance requirement or partnership checklist, it asks a central question:</p>
-            <p style="font-style: italic; color: #2c2c2c; margin: 1.5rem 0; padding: 1rem; border-left: 3px solid #8b6914; background: #faf8f5;">To what extent are organizations aligned with community-defined realities and priorities?</p>
-            <p>Grounded in a "localizing from the ground up" approach, the tool helps organizations identify where their practices may be extractive, performative, partially aligned, or genuinely community-centered.</p>
-
-            <h3>Eight Domains of Examination</h3>
-            <div class="domains">
-                <span>Community power structures</span>
-                <span>External agendas versus community priorities</span>
-                <span>Asset-based approaches</span>
-                <span>Inclusion</span>
-                <span>Cultural fluency</span>
-                <span>Community knowledge</span>
-                <span>Accountability</span>
-                <span>Resilience</span>
-            </div>
-
-            <p style="font-size: 0.9rem; color: #8c8c8c;">The framework is under active development and is being integrated into select evaluation and organizational assessment engagements. Pathways Consulting welcomes conversations with organizations interested in piloting or contributing to its refinement.</p>
+    <section class="section dark">
+      <div class="container">
+        <div class="section-header">
+          <h2>For organizations ready to walk the walk on localization.</h2>
+          <p class="lead">
+            The future of humanitarian aid and international development is local. What is needed now is
+            the courage and discipline to operationalize it with clarity, accountability, and grounded action.
+          </p>
         </div>
+      </div>
     </section>
 
-    <section id="writing">
-        <h2>Writing and Analysis</h2>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2>Let’s build something grounded, strategic, and useful.</h2>
+            <p>
+              Reach out for consulting, facilitation, localization diagnostics, proposal strategy,
+              research and learning support, or thought partnership.
+            </p>
+          </div>
 
-        <div class="publication">
-            <a href="#">[Article Title]</a>
-            <div class="venue">Middle East Eye</div>
+          <div class="contact-links">
+            <a href="mailto:pathwaysconsultllc@gmail.com">Email: pathwaysconsultllc@gmail.com</a>
+            <a href="https://www.linkedin.com/in/anabm/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            <a href="https://substack.com/@pathwaysconsultllc" target="_blank" rel="noopener">Read Grounding Impact</a>
+          </div>
         </div>
-
-        <div class="publication">
-            <a href="#">[Policy Brief Title]</a>
-            <div class="venue">Policy Brief</div>
-        </div>
-
-        <div class="publication">
-            <a href="#">[Substack Title]</a>
-            <div class="venue">Substack</div>
-        </div>
-
-        <div class="publication">
-            <a href="#">[Sudan Storytelling Platform Name]</a>
-            <div class="venue">Co-founded storytelling platform on the war in Sudan</div>
-        </div>
-
-        <p style="font-size: 0.85rem; color: #8c8c8c; margin-top: 1.5rem;"><em>Update the links above with your actual publication URLs, or remove this section if you prefer not to link publicly at this stage.</em></p>
+      </div>
     </section>
+  </main>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Pathways Consulting LLC is a founder-led practice. Engagements are conducted directly by the principal consultant, with specialist collaborators engaged as needed.</p>
-
-        <div class="contact-links">
-            <a href="mailto:anab@pathwaysconsulting.llc">Email</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Substack</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Pathways Consulting LLC. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>
+      &copy; 2026 Anab Mohamed / Pathways Consulting LLC. All rights reserved.
+      <br />
+      <a href="mailto:pathwaysconsultllc@gmail.com">pathwaysconsultllc@gmail.com</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/anabm/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;|&nbsp;
+      <a href="https://substack.com/@pathwaysconsultllc" target="_blank" rel="noopener">Substack</a>
+    </p>
+  </footer>
 </body>
 </html>

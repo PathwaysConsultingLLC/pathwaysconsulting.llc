@@ -1,1 +1,1650 @@
 localized-leadership-polycrisis.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Localized Leadership in Polycrisis | Pathways Consulting LLC</title>
+
+  <meta
+    name="description"
+    content="A Pathways Consulting LLC founder-designed humanitarian leadership workshop using systems thinking, power analysis, empathy mapping, and scenario-based learning to explore localized leadership in polycrisis."
+  />
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --sage: #A4AC96;
+      --black: #000000;
+      --forest: #244136;
+      --cream: #FFFFF5;
+      --eucalyptus: #506b5e;
+      --bronze: #977855;
+
+      --soft-border: rgba(164, 172, 150, 0.55);
+      --card-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+      --bronze-soft: rgba(151, 120, 85, 0.15);
+      --sage-soft: rgba(164, 172, 150, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--forest);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--bronze);
+    }
+
+    /* TOP NAVIGATION */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 245, 0.94);
+      border-bottom: 1px solid var(--soft-border);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--forest);
+      line-height: 1.15;
+      min-width: fit-content;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--eucalyptus);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .navlinks {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .navlinks a {
+      color: var(--eucalyptus);
+      text-decoration: none;
+    }
+
+    .navlinks a:hover {
+      color: var(--forest);
+    }
+
+    /* HERO */
+
+    .case-hero {
+      background:
+        radial-gradient(
+          circle at 12% 12%,
+          rgba(151, 120, 85, 0.28),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(36, 65, 54, 0.99),
+          rgba(36, 65, 54, 0.92)
+        ),
+        var(--forest);
+
+      color: var(--cream);
+      padding: 86px 24px 78px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-hero::after {
+      content: "";
+      position: absolute;
+      right: -170px;
+      bottom: -210px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 245, 0.13);
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(2.55rem, 5vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      max-width: 920px;
+    }
+
+    .hero-subtitle {
+      color: rgba(255, 255, 245, 0.92);
+      font-size: 1.25rem;
+      max-width: 820px;
+      margin-bottom: 26px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--cream);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 245, 0.45);
+      padding-bottom: 3px;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover {
+      color: var(--sage);
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 245, 0.09);
+      border: 1px solid rgba(255, 255, 245, 0.22);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    }
+
+    .meta-card h2 {
+      color: var(--cream);
+      font-size: 1.25rem;
+      margin: 0 0 22px;
+      letter-spacing: -0.2px;
+    }
+
+    .meta-item {
+      margin-bottom: 22px;
+    }
+
+    .meta-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--sage);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .meta-value {
+      color: rgba(255, 255, 245, 0.92);
+      font-weight: 700;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      padding: 76px 24px;
+    }
+
+    .section.alt {
+      background: var(--white);
+    }
+
+    .section.dark {
+      background: var(--forest);
+      color: var(--cream);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .content-width {
+      max-width: 860px;
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      color: var(--forest);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.9px;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      color: var(--forest);
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin: 30px 0 12px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: var(--eucalyptus);
+      font-size: 1.14rem;
+    }
+
+    .dark h2,
+    .dark h3 {
+      color: var(--cream);
+    }
+
+    .dark p {
+      color: rgba(255, 255, 245, 0.88);
+    }
+
+    /* FEATURED QUESTIONS */
+
+    .question-card {
+      background: var(--forest);
+      color: var(--cream);
+      border-radius: 28px;
+      padding: 34px;
+      margin: 38px 0;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    }
+
+    .question-card .label {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .question-card p {
+      font-size: 1.38rem;
+      line-height: 1.5;
+      font-weight: 800;
+      margin: 0;
+      color: var(--cream);
+    }
+
+    /* CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--soft-border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--eucalyptus);
+      margin-bottom: 0;
+    }
+
+    .card-tag {
+      display: inline-block;
+      color: var(--forest);
+      background: var(--bronze-soft);
+      border: 1px solid rgba(151, 120, 85, 0.25);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    /* LISTS */
+
+    .reflection-list {
+      padding-left: 24px;
+      margin: 26px 0;
+    }
+
+    .reflection-list li {
+      margin-bottom: 12px;
+      color: var(--eucalyptus);
+    }
+
+    .question-list {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0;
+    }
+
+    .question-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--soft-border);
+      color: var(--forest);
+      font-weight: 700;
+    }
+
+    .question-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* CALLOUTS */
+
+    .callout {
+      border-left: 5px solid var(--bronze);
+      padding: 4px 0 4px 24px;
+      margin: 34px 0;
+      max-width: 900px;
+    }
+
+    .callout p {
+      color: var(--forest);
+      font-size: 1.28rem;
+      line-height: 1.5;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .dark .callout p {
+      color: var(--cream);
+    }
+
+    /* CAPABILITIES */
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .capability {
+      background: var(--sage-soft);
+      color: var(--forest);
+      border: 1px solid rgba(164, 172, 150, 0.50);
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-weight: 800;
+    }
+
+    /* PRACTICE APPLICATIONS */
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .application {
+      background: var(--white);
+      color: var(--forest);
+      border: 1px solid var(--soft-border);
+      border-radius: 18px;
+      padding: 18px;
+      font-weight: 800;
+      box-shadow: var(--card-shadow);
+    }
+
+    /* CLOSING */
+
+    .closing-question {
+      max-width: 920px;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      line-height: 1.35;
+      font-weight: 800;
+      color: var(--cream);
+      margin: 30px 0;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--bronze);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .button-primary:hover {
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .button-secondary {
+      color: var(--cream);
+      border-color: rgba(255, 255, 245, 0.55);
+      background: rgba(255, 255, 245, 0.05);
+    }
+
+    .button-secondary:hover {
+      color: var(--cream);
+      background: rgba(255, 255, 245, 0.11);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 0.94rem;
+    }
+
+    footer a {
+      color: var(--sage);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav,
+      .hero-inner,
+      .grid,
+      .capabilities-grid,
+      .application-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
+
+      .case-hero {
+        padding-top: 66px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 56px 18px;
+      }
+
+      .case-hero {
+        padding: 56px 18px 62px;
+      }
+
+      .card,
+      .meta-card,
+      .question-card {
+        padding: 24px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="../index.html" class="brand" aria-label="Pathways Consulting LLC home">
+        <strong>Pathways Consulting LLC</strong>
+        <span>Founder-led by Anab Mohamed</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#thought-leadership">Thought Leadership</a>
+        <a href="../index.html#engagements">Selected Engagements</a>
+        <a href="../index.html#practice">Practice in Action</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="case-hero">
+
+      <div class="hero-inner">
+
+        <div>
+
+          <a class="back-link" href="../index.html#practice">
+            ← Back to Practice in Action
+          </a>
+
+          <div class="eyebrow">
+            Practice in Action · Founder-Led Initiative
+          </div>
+
+          <h1>
+            Localized Leadership in Polycrisis
+          </h1>
+
+          <p class="hero-subtitle">
+            Designing a Systems-Based Learning Experience
+            for Humanitarian Leadership
+          </p>
+
+        </div>
+
+
+        <aside class="meta-card" aria-label="Initiative details">
+
+          <h2>Initiative at a Glance</h2>
+
+          <div class="meta-item">
+            <span class="meta-label">Initiative</span>
+            <span class="meta-value">
+              Founder-designed learning experience
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Conference</span>
+            <span class="meta-value">
+              Humanitarian Leadership Conference
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">
+              Doha, Qatar
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-value">
+              90-minute facilitated workshop
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Practice Areas</span>
+            <span class="meta-value">
+              Facilitation · Localization · Humanitarian Leadership ·
+              Systems Thinking · Power Analysis · Scenario-Based Learning
+            </span>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE CHALLENGE -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>The Challenge</h2>
+        </div>
+
+        <p>
+          Humanitarian leaders increasingly operate in environments
+          where crises no longer occur one at a time.
+        </p>
+
+        <p>
+          Conflict intersects with displacement. Climate shocks interact
+          with economic instability. Political crises affect humanitarian
+          access. Funding pressures reshape organizational choices.
+          Communities simultaneously navigate multiple systems that
+          humanitarian organizations often address through separate
+          programs, mandates, or sectors.
+        </p>
+
+        <div class="callout">
+          <p>
+            This is the reality of <strong>polycrisis.</strong>
+          </p>
+        </div>
+
+        <p>
+          For the Humanitarian Leadership Conference in Doha, Qatar,
+          Pathways Consulting LLC developed
+          <strong>Localized Leadership in Polycrisis</strong>
+          as a participatory learning experience exploring what leadership
+          requires when crises are interconnected, uncertainty is high,
+          and humanitarian decisions are shaped not only by needs on the
+          ground, but also by the systems of power, financing, and
+          institutional authority surrounding humanitarian action.
+        </p>
+
+        <div class="question-card">
+
+          <div class="label">The workshop's central question</div>
+
+          <p>
+            What does leadership look like when crises are interconnected,
+            solutions are uncertain, and people closest to the problem
+            must have meaningful influence over the response?
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE INITIATIVE -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>The Initiative</h2>
+        </div>
+
+        <p>
+          Localized Leadership in Polycrisis was designed as a
+          90-minute facilitated workshop for the Humanitarian Leadership
+          Conference in Doha.
+        </p>
+
+        <p>
+          Rather than presenting localization as a policy concept or
+          leadership as a set of abstract competencies, the session used
+          systems thinking, facilitated discussion, power analysis, and
+          scenario-based methods to help participants examine the
+          environments in which humanitarian decisions are actually made.
+        </p>
+
+        <p>
+          The learning design incorporated:
+        </p>
+
+        <ul class="reflection-list">
+          <li>systems thinking;</li>
+          <li>power mapping;</li>
+          <li>empathy mapping;</li>
+          <li>scenario-based reflection;</li>
+          <li>localization principles; and</li>
+          <li>collaborative sense-making.</li>
+        </ul>
+
+        <p>
+          The workshop was designed to move beyond asking only:
+        </p>
+
+        <div class="question-card">
+          <div class="label">Moving beyond the technical question</div>
+
+          <p>
+            What should we do?
+          </p>
+        </div>
+
+        <p>
+          and toward a deeper set of questions:
+        </p>
+
+        <ul class="question-list">
+          <li>Who gets to decide?</li>
+          <li>Who controls the resources that make action possible?</li>
+          <li>How does funding shape what humanitarian actors can and cannot do?</li>
+          <li>Whose knowledge influences the response?</li>
+          <li>Where does decision-making authority sit?</li>
+          <li>
+            What changes when leadership and decision-making move
+            closer to those experiencing the crisis?
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE DESIGN -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>The Design</h2>
+
+          <p class="lead">
+            The workshop was developed as an experiential learning
+            process rather than a conventional lecture.
+          </p>
+        </div>
+
+        <p>
+          Its full design included a sequence of systems mapping,
+          power analysis, empathy mapping, and scenario-based reflection.
+          Within the available conference session, the greatest depth of
+          discussion emerged around
+          <strong>
+            power, donor relationships, funding structures, and their
+            influence on humanitarian decision-making.
+          </strong>
+        </p>
+
+        <p>
+          Some components of the methodology were therefore introduced
+          as tools participants could continue using after the session
+          rather than completed as full exercises during the workshop.
+        </p>
+
+        <div class="callout">
+          <p>
+            The workshop itself demonstrated that learning processes
+            must also adapt to what emerges in the room.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 1. ENTERING THE SYSTEM -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <div class="eyebrow" style="color: var(--bronze);">
+            Learning Sequence 01
+          </div>
+
+          <h2>Entering the System</h2>
+        </div>
+
+        <p>
+          Participants were introduced to systems thinking as a way of
+          looking beyond individual humanitarian problems and examining
+          the wider environments in which those problems exist.
+        </p>
+
+        <p>
+          Rather than seeing a humanitarian challenge as an isolated
+          event, participants were encouraged to consider the
+          surrounding system:
+        </p>
+
+        <div class="grid">
+
+          <div class="card">
+            <span class="card-tag">Actors</span>
+            <h3>Who is in the system?</h3>
+            <p>
+              Stakeholders, institutions, communities, humanitarian
+              organizations, donors, governments, and other actors
+              influencing the response.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Relationships</span>
+            <h3>How are they connected?</h3>
+            <p>
+              Relationships, incentives, funding flows, competing
+              priorities, dependencies, and accountability structures.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Power</span>
+            <h3>Who shapes the choices?</h3>
+            <p>
+              Power dynamics, constraints, institutional mandates,
+              resource control, and decision-making authority.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Consequences</span>
+            <h3>What does the system produce?</h3>
+            <p>
+              How interactions across the system shape humanitarian
+              choices, outcomes, incentives, and possibilities.
+            </p>
+          </div>
+
+        </div>
+
+        <p style="margin-top: 34px;">
+          This framing encouraged participants to move beyond linear
+          problem-solving and consider how humanitarian outcomes are
+          shaped by relationships between different parts of a system.
+        </p>
+
+        <p>
+          The discussion quickly demonstrated that some of the most
+          influential elements of humanitarian systems are not always
+          the actors closest to affected communities.
+        </p>
+
+        <p>
+          Funding arrangements, donor priorities, institutional mandates,
+          and external accountability requirements can significantly
+          influence what choices are available to humanitarian organizations.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 2. POWER -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <div class="eyebrow" style="color: var(--bronze);">
+            Learning Sequence 02
+          </div>
+
+          <h2>Examining Power, Funding, and Decision-Making</h2>
+        </div>
+
+        <p>
+          Power emerged as one of the strongest areas of discussion
+          during the session.
+        </p>
+
+        <p>
+          Participants examined how different forms of power operate
+          within humanitarian systems and how those forms of power
+          shape decision-making.
+        </p>
+
+        <ul class="question-list">
+          <li>Who controls funding?</li>
+          <li>Who determines what funding can be used for?</li>
+          <li>Who defines priorities?</li>
+          <li>Who has formal decision-making authority?</li>
+          <li>Who possesses contextual knowledge and community trust?</li>
+          <li>Who is accountable to donors?</li>
+          <li>Who is accountable to affected communities?</li>
+          <li>
+            What happens when those forms of accountability point
+            in different directions?
+          </li>
+        </ul>
+
+        <p>
+          The discussion paid particular attention to
+          <strong>donor and funding power.</strong>
+        </p>
+
+        <p>
+          Humanitarian organizations may understand local priorities
+          and recognize what communities need, while simultaneously
+          operating within funding arrangements that determine eligible
+          activities, timelines, reporting requirements, geographic
+          priorities, or acceptable forms of intervention.
+        </p>
+
+        <div class="callout">
+          <p>
+            This creates an important leadership tension.
+          </p>
+        </div>
+
+        <p>
+          Organizations may formally possess responsibility for
+          implementing humanitarian action while having significantly
+          less control over the parameters within which that action occurs.
+        </p>
+
+        <p>
+          Participants explored how these constraints influence decisions
+          throughout the humanitarian system and how financial power can
+          translate into strategic and operational power.
+        </p>
+
+        <div class="question-card">
+          <div class="label">A deeper question of power</div>
+
+          <p>
+            Who shapes the conditions under which a decision
+            becomes possible?
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 3. PARTICIPATION TO AUTHORITY -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+
+          <div class="eyebrow" style="color: var(--bronze);">
+            Learning Sequence 03
+          </div>
+
+          <h2>From Participation to Decision-Making Authority</h2>
+
+        </div>
+
+        <p>
+          The discussion of power also highlighted an important
+          distinction between
+          <strong>participation and authority.</strong>
+        </p>
+
+        <p>
+          Local organizations or communities may be invited into planning
+          processes, consultations, coordination meetings, or implementation
+          partnerships without necessarily having equivalent influence
+          over the decisions that ultimately shape humanitarian action.
+        </p>
+
+        <div class="callout">
+          <p>
+            A person or organization can be present in a
+            decision-making process while still having limited control
+            over its outcome.
+          </p>
+        </div>
+
+        <p>
+          This distinction sits at the heart of localization debates.
+        </p>
+
+        <p>
+          If funding priorities, program parameters, and strategic
+          choices have largely been determined before local actors enter
+          the process, participation alone does not necessarily represent
+          a meaningful redistribution of power.
+        </p>
+
+        <p>
+          The workshop encouraged participants to examine localization
+          not only through questions of representation or implementation,
+          but through questions of
+          <strong>decision-making authority:</strong>
+        </p>
+
+        <ul class="question-list">
+          <li>Who defines the problem?</li>
+          <li>Who determines the available options?</li>
+          <li>Who controls the resources?</li>
+          <li>Who can change direction?</li>
+          <li>Who can say no?</li>
+          <li>Whose priorities ultimately shape the intervention?</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- 4. EMPATHY MAPPING -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+
+          <div class="eyebrow" style="color: var(--bronze);">
+            Learning Sequence 04
+          </div>
+
+          <h2>Empathy Mapping as a Tool for Systems Practice</h2>
+
+        </div>
+
+        <p>
+          The workshop design also included
+          <strong>empathy mapping</strong>
+          as a method for examining how different actors experience
+          the same humanitarian system.
+        </p>
+
+        <p>
+          Because of time constraints and the depth of discussion around
+          power, donor relationships, and funding structures, participants
+          did not move through the full empathy-mapping exercise during
+          the session.
+        </p>
+
+        <p>
+          Instead, they were
+          <strong>
+            introduced to the method and encouraged to use it within
+            the systems in which they operate.
+          </strong>
+        </p>
+
+        <p>
+          The tool invited participants to consider what different
+          stakeholders might:
+        </p>
+
+        <div class="capabilities-grid">
+          <div class="capability">See</div>
+          <div class="capability">Hear</div>
+          <div class="capability">Experience</div>
+          <div class="capability">Fear</div>
+          <div class="capability">Prioritize</div>
+          <div class="capability">Know</div>
+          <div class="capability">Need</div>
+        </div>
+
+        <p style="margin-top: 34px;">
+          Its purpose was not simply to encourage interpersonal empathy.
+        </p>
+
+        <p>
+          Within a systems-thinking framework, empathy mapping provides
+          a structured way of identifying how actors occupying different
+          positions within the same system may understand the problem
+          differently.
+        </p>
+
+        <p>
+          A donor, international organization, national organization,
+          local civil society actor, frontline worker, government
+          institution, and crisis-affected community may all be responding
+          to the same humanitarian context while experiencing very
+          different incentives, pressures, constraints, and consequences.
+        </p>
+
+        <div class="question-card">
+          <div class="label">Using another position in the system</div>
+
+          <p>
+            How does this system look from another position within it?
+          </p>
+        </div>
+
+        <div class="question-card">
+          <div class="label">And importantly</div>
+
+          <p>
+            Whose understanding of the system currently carries the
+            most influence over decisions?
+          </p>
+        </div>
+
+        <p>
+          The method therefore complemented the workshop's broader
+          examination of power by connecting institutional structures
+          with lived experience.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 5. SCENARIO-BASED REFLECTION -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+
+          <div class="eyebrow" style="color: var(--bronze);">
+            Learning Sequence 05
+          </div>
+
+          <h2>Scenario-Based Reflection as a Continuing Practice</h2>
+
+        </div>
+
+        <p>
+          The broader workshop design included an evolving humanitarian
+          scenario through which participants could test decisions as
+          circumstances changed.
+        </p>
+
+        <p>
+          The intention was to reproduce one of the defining features
+          of polycrisis:
+          <strong>
+            decisions are rarely made in a stable environment.
+          </strong>
+        </p>
+
+        <p>
+          New pressures emerge. Funding changes. Political conditions
+          shift. Humanitarian access changes. Stakeholder relationships
+          evolve.
+        </p>
+
+        <p>
+          Time limitations meant that the full scenario sequence could
+          not be completed during the conference session.
+        </p>
+
+        <p>
+          Participants were instead introduced to the approach as a
+          practical method they could adapt within their own teams
+          and organizations.
+        </p>
+
+        <p>
+          Scenario-based reflection can help humanitarian actors examine
+          not simply:
+        </p>
+
+        <div class="question-card">
+          <div class="label">Beyond the immediate answer</div>
+          <p>What would we do?</p>
+        </div>
+
+        <p>
+          but:
+        </p>
+
+        <ul class="question-list">
+          <li>What assumptions is this decision based on?</li>
+          <li>What happens if one of those assumptions changes?</li>
+          <li>
+            Which actors gain or lose influence under different conditions?
+          </li>
+          <li>
+            How might funding constraints affect the choices available to us?
+          </li>
+          <li>
+            How could the system respond in ways we did not anticipate?
+          </li>
+        </ul>
+
+        <p>
+          In this sense, the exercise became not only a workshop activity
+          but a transferable way of thinking.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOCALIZATION AS LEADERSHIP -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>Localization as a Leadership Question</h2>
+        </div>
+
+        <p>
+          One of the workshop's central propositions was that localization
+          cannot be reduced to geography.
+        </p>
+
+        <div class="callout">
+          <p>
+            Localized leadership is not simply leadership exercised by
+            someone physically closer to a crisis.
+          </p>
+        </div>
+
+        <p>
+          It requires examining
+          <strong>
+            who has meaningful authority to interpret the problem,
+            define priorities, allocate resources, and shape the response.
+          </strong>
+        </p>
+
+        <p>
+          A humanitarian response may be locally implemented while
+          remaining externally directed.
+        </p>
+
+        <p>
+          A national organization may deliver programming while having
+          limited influence over strategy.
+        </p>
+
+        <p>
+          Communities may be consulted extensively while still lacking
+          meaningful decision-making power.
+        </p>
+
+        <p>
+          And a local organization may hold formal responsibility for
+          implementation while the boundaries of possible action have
+          already been shaped by funding conditions established elsewhere.
+        </p>
+
+        <p>
+          This makes localization inseparable from questions of
+          financing and power.
+        </p>
+
+        <div class="question-card">
+          <div class="label">A shift in perspective</div>
+
+          <p>
+            Localization is not simply a question of where humanitarian
+            action happens, but of where authority sits within the system
+            that produces that action.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY POLYCRISIS MATTERS -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>Why Polycrisis Matters</h2>
+        </div>
+
+        <p>
+          The concept of polycrisis provided a useful framework because
+          it encouraged participants to move beyond single-issue thinking.
+        </p>
+
+        <p>
+          Humanitarian leaders rarely encounter problems that fit neatly
+          within one sector.
+        </p>
+
+        <ul class="reflection-list">
+          <li>Food insecurity may intersect with displacement.</li>
+          <li>Conflict may influence market systems.</li>
+          <li>Climate shocks may alter migration patterns.</li>
+          <li>Political decisions may change humanitarian access.</li>
+          <li>Funding restrictions may reshape organizational priorities.</li>
+          <li>
+            Institutional accountability requirements may compete
+            with community priorities.
+          </li>
+        </ul>
+
+        <p>
+          These relationships mean that leadership requires more than
+          technical expertise within a single area.
+        </p>
+
+        <div class="callout">
+          <p>
+            It requires an ability to understand the system surrounding
+            the problem and the structures of power that shape
+            possible responses.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT IT DEMONSTRATED -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>What the Workshop Demonstrated</h2>
+
+          <p class="lead">
+            The Humanitarian Leadership Conference session demonstrated
+            Pathways Consulting LLC's ability to translate complex concepts
+            into participatory learning experiences while adapting
+            facilitation to the conversations that emerge in the room.
+          </p>
+
+        </div>
+
+        <div class="capabilities-grid">
+
+          <div class="capability">Humanitarian leadership</div>
+          <div class="capability">Systems thinking</div>
+          <div class="capability">Localization</div>
+          <div class="capability">Power analysis</div>
+          <div class="capability">Donor and funding dynamics</div>
+          <div class="capability">Scenario design</div>
+          <div class="capability">Empathy-based analysis</div>
+          <div class="capability">Participatory facilitation</div>
+          <div class="capability">Adaptive decision-making</div>
+
+        </div>
+
+        <div class="content-width" style="margin-top: 42px;">
+
+          <p>
+            It also demonstrated an approach to facilitation in which
+            the objective is not to force completion of a predetermined
+            sequence of activities.
+          </p>
+
+          <p>
+            The depth of participant discussion around donor power,
+            financing, and decision-making became an important part
+            of the learning itself.
+          </p>
+
+          <p>
+            Rather than cutting that discussion short simply to complete
+            every planned exercise, the session created space to explore
+            the issues participants were actively interrogating while
+            introducing the remaining tools as methods they could take
+            back into their own contexts.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRACTICE IMPLICATIONS -->
+
+    <section class="section alt">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>Practice Implications</h2>
+
+          <p class="lead">
+            The workshop model can be adapted for organizations working
+            across humanitarian response, international development,
+            peacebuilding, civil society strengthening, philanthropy,
+            and international partnerships.
+          </p>
+
+        </div>
+
+        <div class="application-grid">
+
+          <div class="application">Leadership development</div>
+          <div class="application">Team retreats</div>
+          <div class="application">Localization strategy processes</div>
+          <div class="application">Partnership workshops</div>
+          <div class="application">Donor-partner dialogue</div>
+          <div class="application">Humanitarian scenario exercises</div>
+          <div class="application">Organizational learning</div>
+          <div class="application">Power-mapping processes</div>
+          <div class="application">Systems-thinking training</div>
+
+        </div>
+
+        <div class="content-width" style="margin-top: 42px;">
+
+          <p>
+            The context can change while the underlying learning
+            architecture remains consistent.
+          </p>
+
+          <p>
+            Participants are encouraged to move from asking:
+          </p>
+
+          <div class="question-card">
+            <div class="label">From</div>
+            <p>What is the solution?</p>
+          </div>
+
+          <p>
+            toward asking:
+          </p>
+
+          <ul class="question-list">
+            <li>What system are we operating within?</li>
+            <li>Where does power sit within that system?</li>
+            <li>How do funding relationships shape our choices?</li>
+            <li>Who has decision-making authority?</li>
+            <li>Who experiences the consequences of those decisions?</li>
+            <li>Whose knowledge matters?</li>
+            <li>
+              What would need to change for leadership to become
+              more locally grounded?
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRACTICE IN ACTION -->
+
+    <section class="section dark">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>Practice in Action</h2>
+        </div>
+
+        <p>
+          Localized Leadership in Polycrisis reflects a broader
+          Pathways Consulting approach to facilitation and
+          organizational learning.
+        </p>
+
+        <p>
+          Complex humanitarian challenges rarely require better
+          technical answers alone.
+        </p>
+
+        <p>
+          They require the ability to recognize interdependence,
+          examine institutional constraints, surface assumptions,
+          understand multiple perspectives, and interrogate how power
+          shapes what becomes possible.
+        </p>
+
+        <p>
+          At the Humanitarian Leadership Conference in Doha, the workshop
+          created space for humanitarian practitioners to examine those
+          dynamics, with particular attention to the relationship between
+          <strong>
+            funding, donor power, humanitarian decision-making,
+            and localization.
+          </strong>
+        </p>
+
+        <p>
+          It also equipped participants with systems-thinking tools—including
+          empathy mapping and scenario-based reflection—that they could
+          continue applying within their own organizations and operating
+          environments.
+        </p>
+
+        <div class="closing-question">
+          Leadership in polycrisis requires more than responding to
+          complexity. It requires understanding the systems that shape
+          humanitarian action—including who controls resources, who
+          defines the boundaries of possible action, and who ultimately
+          has the authority to decide.
+        </div>
+
+        <div class="button-row">
+
+          <a
+            class="button button-primary"
+            href="mailto:pathwaysconsultllc@gmail.com"
+          >
+            Start a Conversation
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="../index.html#practice"
+          >
+            ← Back to Practice in Action
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 Anab Mohamed / Pathways Consulting LLC.
+      All rights reserved.
+
+      <br />
+
+      <a href="mailto:pathwaysconsultllc@gmail.com">
+        pathwaysconsultllc@gmail.com
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://www.linkedin.com/in/anabm/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://substack.com/@pathwaysconsultllc"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack
+      </a>
+
+    </p>
+
+  </footer>
+
+</body>
+</html>

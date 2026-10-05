@@ -1,1 +1,1079 @@
 practice/community-centered-localization-diagnostic-tool.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Community-Centered Localization Diagnostic Tool | Pathways Consulting LLC</title>
+
+  <meta
+    name="description"
+    content="A Pathways Consulting LLC founder-led initiative exploring how power, resources, decision-making, accountability, partnership quality, and community voice shape locally led development."
+  />
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --sage: #A4AC96;
+      --black: #000000;
+      --forest: #244136;
+      --cream: #FFFFF5;
+      --eucalyptus: #506b5e;
+      --bronze: #977855;
+
+      --soft-border: rgba(164, 172, 150, 0.55);
+      --card-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+      --bronze-soft: rgba(151, 120, 85, 0.15);
+      --sage-soft: rgba(164, 172, 150, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--forest);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--bronze);
+    }
+
+    /* TOP NAVIGATION */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 245, 0.94);
+      border-bottom: 1px solid var(--soft-border);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--forest);
+      line-height: 1.15;
+      min-width: fit-content;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--eucalyptus);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .navlinks {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .navlinks a {
+      color: var(--eucalyptus);
+      text-decoration: none;
+    }
+
+    .navlinks a:hover {
+      color: var(--forest);
+    }
+
+    /* HERO */
+
+    .case-hero {
+      background:
+        radial-gradient(
+          circle at 12% 12%,
+          rgba(151, 120, 85, 0.28),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(36, 65, 54, 0.99),
+          rgba(36, 65, 54, 0.92)
+        ),
+        var(--forest);
+
+      color: var(--cream);
+      padding: 86px 24px 78px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-hero::after {
+      content: "";
+      position: absolute;
+      right: -170px;
+      bottom: -210px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 245, 0.13);
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(2.55rem, 5vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      max-width: 920px;
+    }
+
+    .hero-subtitle {
+      color: rgba(255, 255, 245, 0.92);
+      font-size: 1.25rem;
+      max-width: 820px;
+      margin-bottom: 26px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--cream);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 245, 0.45);
+      padding-bottom: 3px;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover {
+      color: var(--sage);
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 245, 0.09);
+      border: 1px solid rgba(255, 255, 245, 0.22);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    }
+
+    .meta-card h2 {
+      color: var(--cream);
+      font-size: 1.25rem;
+      margin: 0 0 22px;
+      letter-spacing: -0.2px;
+    }
+
+    .meta-item {
+      margin-bottom: 22px;
+    }
+
+    .meta-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--sage);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .meta-value {
+      color: rgba(255, 255, 245, 0.92);
+      font-weight: 700;
+    }
+
+    .status {
+      display: inline-block;
+      background: rgba(151, 120, 85, 0.28);
+      color: var(--cream);
+      border: 1px solid rgba(255, 255, 245, 0.20);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      padding: 76px 24px;
+    }
+
+    .section.alt {
+      background: var(--white);
+    }
+
+    .section.dark {
+      background: var(--forest);
+      color: var(--cream);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .content-width {
+      max-width: 860px;
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      color: var(--forest);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.9px;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      color: var(--forest);
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin: 30px 0 12px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: var(--eucalyptus);
+      font-size: 1.14rem;
+    }
+
+    .dark h2,
+    .dark h3 {
+      color: var(--cream);
+    }
+
+    .dark p {
+      color: rgba(255, 255, 245, 0.88);
+    }
+
+    /* FEATURED QUESTION */
+
+    .question-card {
+      background: var(--forest);
+      color: var(--cream);
+      border-radius: 28px;
+      padding: 34px;
+      margin: 38px 0;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    }
+
+    .question-card .label {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .question-card p {
+      font-size: 1.45rem;
+      line-height: 1.45;
+      font-weight: 800;
+      margin: 0;
+      color: var(--cream);
+    }
+
+    /* LISTS AND CARDS */
+
+    .reflection-list {
+      padding-left: 24px;
+      margin: 26px 0;
+    }
+
+    .reflection-list li {
+      margin-bottom: 12px;
+      color: var(--eucalyptus);
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--soft-border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--eucalyptus);
+      margin-bottom: 0;
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .capability {
+      background: var(--sage-soft);
+      color: var(--forest);
+      border: 1px solid rgba(164, 172, 150, 0.50);
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-weight: 800;
+    }
+
+    /* COMMUNITY SECTION */
+
+    .community-callout {
+      border-left: 5px solid var(--bronze);
+      padding: 4px 0 4px 24px;
+      margin: 34px 0;
+      max-width: 900px;
+    }
+
+    .community-callout p {
+      color: var(--forest);
+      font-size: 1.28rem;
+      line-height: 1.5;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .question-list {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+    }
+
+    .question-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--soft-border);
+      color: var(--forest);
+      font-weight: 700;
+    }
+
+    .question-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* CLOSING */
+
+    .closing-question {
+      max-width: 920px;
+      font-size: clamp(1.6rem, 3vw, 2.45rem);
+      line-height: 1.35;
+      font-weight: 800;
+      color: var(--cream);
+      margin: 30px 0;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--bronze);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .button-primary:hover {
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .button-secondary {
+      color: var(--cream);
+      border-color: rgba(255, 255, 245, 0.55);
+      background: rgba(255, 255, 245, 0.05);
+    }
+
+    .button-secondary:hover {
+      color: var(--cream);
+      background: rgba(255, 255, 245, 0.11);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 0.94rem;
+    }
+
+    footer a {
+      color: var(--sage);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav,
+      .hero-inner,
+      .principles-grid,
+      .capabilities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
+
+      .case-hero {
+        padding-top: 66px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 56px 18px;
+      }
+
+      .case-hero {
+        padding: 56px 18px 62px;
+      }
+
+      .card,
+      .meta-card,
+      .question-card {
+        padding: 24px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="../index.html" class="brand" aria-label="Pathways Consulting LLC home">
+        <strong>Pathways Consulting LLC</strong>
+        <span>Founder-led by Anab Mohamed</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#thought-leadership">Thought Leadership</a>
+        <a href="../index.html#engagements">Selected Engagements</a>
+        <a href="../index.html#practice">Practice in Action</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- CASE STUDY HERO -->
+
+    <section class="case-hero">
+
+      <div class="hero-inner">
+
+        <div>
+
+          <a class="back-link" href="../index.html#practice">
+            ← Back to Practice in Action
+          </a>
+
+          <div class="eyebrow">
+            Practice in Action · Founder-Led Initiative
+          </div>
+
+          <h1>
+            Community-Centered Localization Diagnostic Tool
+          </h1>
+
+          <p class="hero-subtitle">
+            From Questions of Power, Practice, and Accountability
+            to Locally-Led Systems Change
+          </p>
+
+        </div>
+
+
+        <aside class="meta-card" aria-label="Initiative details">
+
+          <h2>Initiative at a Glance</h2>
+
+          <div class="meta-item">
+            <span class="meta-label">Initiative</span>
+            <span class="meta-value">
+              Founder-led research and tool development
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Practice Areas</span>
+            <span class="meta-value">
+              Community-Led Localization Strategy ·
+              Organizational Learning ·
+              Systems Change ·
+              Equitable Partnerships ·
+              Community-Centered Practice
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="status">Framework in Development</span>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE CHALLENGE -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>The Challenge</h2>
+        </div>
+
+        <p>
+          Localization has become an increasingly prominent commitment
+          across humanitarian aid, international development, philanthropy,
+          and civil society. Organizations are being asked to shift
+          resources, leadership, decision-making, and implementation
+          closer to local actors.
+        </p>
+
+        <p>
+          Yet the language of localization can obscure an important question:
+        </p>
+
+        <div class="question-card">
+          <div class="label">A central question</div>
+
+          <p>
+            What is actually changing?
+          </p>
+        </div>
+
+        <p>
+          An organization may increase the number of local partners it works
+          with without substantially shifting who controls resources.
+          A project may be locally implemented while priorities continue
+          to be determined elsewhere. Communities may participate in
+          consultations while remaining largely absent from decisions
+          about strategy, funding, program design, or accountability.
+        </p>
+
+        <p>
+          As a result, measuring localization through organizational
+          policies, partnership numbers, or funding percentages alone
+          can provide an incomplete picture.
+        </p>
+
+        <p>
+          The Community-Centered Localization Diagnostic Tool emerged
+          from a need for a more reflective approach—one that examines
+          localization not simply as an institutional commitment, but
+          as a set of relationships involving
+          <strong>
+            power, decision-making, resources, accountability,
+            partnership quality, and community voice.
+          </strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE INITIATIVE -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>The Initiative</h2>
+        </div>
+
+        <p>
+          Pathways Consulting LLC is developing the
+          <strong>Community-Centered Localization Diagnostic Tool (CLDT)</strong>
+          as a practical framework to help organizations examine how
+          localization shows up across their existing systems and ways
+          of working.
+        </p>
+
+        <p>
+          Rather than functioning as a compliance scorecard, the tool
+          is designed to support structured organizational reflection.
+        </p>
+
+        <div class="question-card">
+          <div class="label">The diagnostic asks</div>
+
+          <p>
+            To what extent do an organization's systems, relationships,
+            and decision-making practices create the conditions for
+            genuinely locally led and community-centered work?
+          </p>
+        </div>
+
+        <p>
+          The diagnostic examines eight interconnected domains of
+          organizational practice, bringing attention to questions
+          such as:
+        </p>
+
+        <ul class="reflection-list">
+          <li>Who defines priorities?</li>
+          <li>Who participates in strategic and programmatic decisions?</li>
+          <li>Who controls financial resources?</li>
+          <li>How are local partners positioned within institutional relationships?</li>
+          <li>Whose knowledge is treated as expertise?</li>
+          <li>How does community voice influence decisions?</li>
+          <li>Where does accountability ultimately sit?</li>
+          <li>
+            What organizational systems reinforce—or constrain—
+            locally led practice?
+          </li>
+        </ul>
+
+        <p>
+          The framework is intentionally designed to move beyond a
+          binary assessment of whether an organization “does localization.”
+        </p>
+
+        <p>
+          Instead, it asks organizations to examine
+          <strong>
+            where power currently sits, what practices are already
+            changing, where contradictions remain, and what realistic
+            pathways toward deeper transformation might look like.
+          </strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE APPROACH -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>The Approach</h2>
+
+          <p class="lead">
+            The tool is being designed around several principles
+            intended to keep the diagnostic grounded in organizational
+            reality rather than abstract commitments.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+
+          <article class="card">
+            <h3>Start with existing evidence</h3>
+
+            <p>
+              Organizations should not need to generate extensive new
+              documentation simply to participate in the diagnostic.
+              Policies, partnership agreements, strategies, budgets,
+              monitoring systems, organizational structures, and
+              existing program information can provide an initial
+              evidence base.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <h3>Examine practice, not only policy</h3>
+
+            <p>
+              An organization may have strong commitments on paper
+              while everyday practices tell a more complicated story.
+              The diagnostic therefore encourages users to examine
+              both formal systems and how decisions are actually made.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <h3>Treat localization as multidimensional</h3>
+
+            <p>
+              Funding is important, but resource transfer alone does
+              not determine whether work is locally led.
+              Decision-making authority, knowledge, governance,
+              partnership dynamics, accountability, and community
+              influence must also be considered.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <h3>Surface tensions rather than hide them</h3>
+
+            <p>
+              Localization frequently involves competing incentives
+              and institutional constraints. The tool is intended to
+              make these tensions visible so organizations can engage
+              with them rather than produce artificially positive
+              assessments.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <h3>Create pathways for change</h3>
+
+            <p>
+              The purpose of diagnosis is not simply to identify
+              weaknesses. Each domain is intended to help organizations
+              recognize existing strengths, identify gaps, and define
+              practical next steps.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMMUNITY PERSPECTIVE -->
+
+    <section class="section alt">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>Extending the Question to Communities</h2>
+        </div>
+
+        <p>
+          An important element of the initiative is the recognition
+          that an organizational self-assessment cannot, by itself,
+          determine whether work is genuinely community-centered.
+        </p>
+
+        <div class="community-callout">
+          <p>
+            An organization may consider its approach participatory
+            while communities experience the relationship very differently.
+          </p>
+        </div>
+
+        <p>
+          For this reason, the broader concept includes development
+          of a complementary
+          <strong>community-facing or “reverse” diagnostic.</strong>
+        </p>
+
+        <p>
+          Instead of asking organizations how well they believe they
+          share power, the reverse diagnostic would explore questions
+          from the perspective of communities and local stakeholders:
+        </p>
+
+        <ul class="question-list">
+          <li>Do people understand how decisions are made?</li>
+          <li>Can they influence priorities?</li>
+          <li>Do they know where resources are going?</li>
+          <li>Can they challenge decisions?</li>
+          <li>Do feedback mechanisms produce meaningful changes?</li>
+          <li>
+            Do communities experience themselves as participants,
+            partners, or decision-makers?
+          </li>
+        </ul>
+
+        <p style="margin-top: 30px;">
+          The comparison between institutional perception and
+          community experience may reveal some of the most important
+          insights.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT IT DEMONSTRATES -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>What the Initiative Demonstrates</h2>
+
+          <p class="lead">
+            The Community-Centered Localization Diagnostic Tool reflects
+            Pathways Consulting LLC's approach to systems change:
+            translating broad concepts such as localization, locally led
+            development, participation, and power into questions that
+            organizations can actually examine within their own structures
+            and practices.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+
+          <div class="capability">
+            Localization strategy and analysis
+          </div>
+
+          <div class="capability">
+            Organizational diagnostics
+          </div>
+
+          <div class="capability">
+            Systems thinking
+          </div>
+
+          <div class="capability">
+            Equitable partnership frameworks
+          </div>
+
+          <div class="capability">
+            Participatory and community-centered design
+          </div>
+
+          <div class="capability">
+            Organizational learning
+          </div>
+
+          <div class="capability">
+            Qualitative indicator development
+          </div>
+
+          <div class="capability">
+            Translating complex policy concepts into practical tools
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHERE THE WORK IS GOING -->
+
+    <section class="section dark">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+          <h2>Where the Work Is Going</h2>
+        </div>
+
+        <p>
+          The Community-Centered Localization Diagnostic Tool is
+          currently being developed as an iterative framework rather
+          than presented as a finished methodology.
+        </p>
+
+        <p>
+          The next phase is intended to test the tool with a small
+          number of organizations, learn how the domains and questions
+          function in real organizational settings, and refine both
+          the organizational and community-facing components.
+        </p>
+
+        <p>
+          The longer-term objective is not to create another
+          localization ranking.
+        </p>
+
+        <p>
+          It is to create a structured space for organizations to
+          ask a harder question:
+        </p>
+
+        <div class="closing-question">
+          If we say we are committed to locally led development,
+          what would we expect to see differently in the way power,
+          resources, relationships, knowledge, and decisions move
+          through our organization?
+        </div>
+
+        <p>
+          <strong>That question is where meaningful localization begins.</strong>
+        </p>
+
+        <div class="button-row">
+
+          <a
+            class="button button-primary"
+            href="mailto:pathwaysconsultllc@gmail.com"
+          >
+            Start a Conversation
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="../index.html#practice"
+          >
+            ← Back to Practice in Action
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 Anab Mohamed / Pathways Consulting LLC.
+      All rights reserved.
+
+      <br />
+
+      <a href="mailto:pathwaysconsultllc@gmail.com">
+        pathwaysconsultllc@gmail.com
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://www.linkedin.com/in/anabm/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://substack.com/@pathwaysconsultllc"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack
+      </a>
+    </p>
+
+  </footer>
+
+</body>
+</html>

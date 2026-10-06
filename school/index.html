@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pathways Development Practice School | Pathways Consulting LLC</title>
+
+  <meta
+    name="description"
+    content="Pathways Development Practice School is an emerging learning platform for practitioners working across international development, humanitarian action, civil society, policy, and social change. Launching in 2027."
+  />
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --sage: #A4AC96;
+      --black: #000000;
+      --forest: #244136;
+      --cream: #FFFFF5;
+      --eucalyptus: #506b5e;
+      --bronze: #977855;
+
+      --soft-border: rgba(164, 172, 150, 0.55);
+      --card-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+      --bronze-soft: rgba(151, 120, 85, 0.15);
+      --sage-soft: rgba(164, 172, 150, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--forest);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--bronze);
+    }
+
+
+    /* NAVIGATION */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 245, 0.94);
+      border-bottom: 1px solid var(--soft-border);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--forest);
+      line-height: 1.15;
+      min-width: fit-content;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--eucalyptus);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .navlinks {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .navlinks a {
+      color: var(--eucalyptus);
+      text-decoration: none;
+    }
+
+    .navlinks a:hover {
+      color: var(--forest);
+    }
+
+    .navlinks a.current {
+      color: var(--bronze);
+    }
+
+
+    /* HERO */
+
+    .school-hero {
+      background:
+        radial-gradient(
+          circle at 12% 12%,
+          rgba(151, 120, 85, 0.28),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(36, 65, 54, 0.99),
+          rgba(36, 65, 54, 0.92)
+        ),
+        var(--forest);
+
+      color: var(--cream);
+      padding: 110px 24px 105px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .school-hero::after {
+      content: "";
+      position: absolute;
+      right: -170px;
+      bottom: -210px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 245, 0.13);
+    }
+
+    .school-hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -2.2px;
+      max-width: 950px;
+    }
+
+    .school-intro {
+      color: rgba(255, 255, 245, 0.92);
+      font-size: 1.24rem;
+      line-height: 1.65;
+      max-width: 790px;
+      margin-bottom: 32px;
+    }
+
+    .school-status {
+      display: inline-block;
+      background: rgba(151, 120, 85, 0.24);
+      border: 1px solid rgba(255, 255, 245, 0.22);
+      border-radius: 999px;
+      padding: 10px 17px;
+      color: var(--cream);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .school-status span {
+      color: var(--sage);
+      padding: 0 6px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      padding: 78px 24px;
+    }
+
+    .section.alt {
+      background: var(--white);
+    }
+
+    .section.dark {
+      background: var(--forest);
+      color: var(--cream);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .content-width {
+      max-width: 860px;
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--forest);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.9px;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      color: var(--forest);
+      font-size: 1.24rem;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: var(--eucalyptus);
+      font-size: 1.14rem;
+    }
+
+    .dark h2,
+    .dark h3 {
+      color: var(--cream);
+    }
+
+    .dark p {
+      color: rgba(255, 255, 245, 0.88);
+    }
+
+
+    /* FEATURED STATEMENT */
+
+    .practice-statement {
+      border-left: 5px solid var(--bronze);
+      padding-left: 24px;
+      margin: 36px 0;
+      max-width: 900px;
+    }
+
+    .practice-statement p {
+      color: var(--forest);
+      font-size: 1.34rem;
+      line-height: 1.5;
+      font-weight: 700;
+      margin: 0;
+    }
+
+
+    /* CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--soft-border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card p {
+      color: var(--eucalyptus);
+      margin-bottom: 0;
+    }
+
+    .card-tag {
+      display: inline-block;
+      color: var(--forest);
+      background: var(--bronze-soft);
+      border: 1px solid rgba(151, 120, 85, 0.25);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+
+    /* FORMAT PILLS */
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 28px;
+    }
+
+    .pill {
+      background: var(--sage-soft);
+      color: var(--forest);
+      border: 1px solid rgba(164, 172, 150, 0.50);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+
+    /* COMING SOON */
+
+    .coming-soon {
+      max-width: 900px;
+    }
+
+    .coming-soon-label {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .coming-soon h2 {
+      color: var(--cream);
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      max-width: 850px;
+    }
+
+    .coming-soon .big-line {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 760px;
+    }
+
+
+    /* BUTTONS */
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--bronze);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .button-primary:hover {
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .button-secondary {
+      color: var(--cream);
+      border-color: rgba(255, 255, 245, 0.55);
+      background: rgba(255, 255, 245, 0.05);
+    }
+
+    .button-secondary:hover {
+      color: var(--cream);
+      background: rgba(255, 255, 245, 0.11);
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      padding: 34px 24px;
+      font-size: 0.94rem;
+    }
+
+    footer a {
+      color: var(--sage);
+    }
+
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .nav,
+      .grid,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
+
+      .school-hero {
+        padding-top: 76px;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .section {
+        padding: 58px 18px;
+      }
+
+      .school-hero {
+        padding: 74px 18px 78px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .school-intro {
+        font-size: 1.08rem;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="topbar">
+
+    <nav class="nav" aria-label="Main navigation">
+
+      <a
+        href="../index.html"
+        class="brand"
+        aria-label="Pathways Consulting LLC home"
+      >
+        <strong>Pathways Consulting LLC</strong>
+        <span>Founder-led by Anab Mohamed</span>
+      </a>
+
+
+      <div class="navlinks">
+
+        <a href="../index.html#about">
+          About
+        </a>
+
+        <a href="../index.html#services">
+          Services
+        </a>
+
+        <a href="./" class="current" aria-current="page">
+          Practice School
+        </a>
+
+        <a href="../index.html#thought-leadership">
+          Thought Leadership
+        </a>
+
+        <a href="../index.html#engagements">
+          Selected Engagements
+        </a>
+
+        <a href="../index.html#practice">
+          Practice in Action
+        </a>
+
+        <a href="../index.html#approach">
+          Approach
+        </a>
+
+        <a href="../index.html#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="school-hero">
+
+      <div class="school-hero-inner">
+
+        <div class="eyebrow">
+          Pathways Development Practice School
+        </div>
+
+        <h1>
+          Where development concepts become practice.
+        </h1>
+
+        <p class="school-intro">
+          A new learning platform for practitioners working across
+          development, humanitarian action, civil society, policy,
+          and social change.
+        </p>
+
+        <div class="school-status">
+          Currently in development
+          <span>·</span>
+          Launching in 2027
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+      <div class="container content-width">
+
+        <div class="section-header">
+
+          <h2>
+            A school for the practice behind the principles.
+          </h2>
+
+          <p class="lead">
+            The Pathways Development Practice School is an emerging
+            learning platform designed to translate complex ideas
+            about development, humanitarian action, localization,
+            power, participation, and systems change into practical
+            learning for people doing the work.
+          </p>
+
+        </div>
+
+        <p>
+          Development and humanitarian practice are filled with
+          powerful concepts: locally led development, participation,
+          equitable partnerships, community engagement, systems
+          thinking, accountability, and localization.
+        </p>
+
+        <p>
+          But understanding the language is different from knowing
+          what those ideas require in practice.
+        </p>
+
+        <p>
+          The Practice School is being developed to help bridge that gap.
+        </p>
+
+        <p>
+          Through applied learning, reflection, case-based discussion,
+          practical tools, and facilitated exploration, the School will
+          create space for practitioners to examine not only
+          <strong>what good practice should look like</strong>,
+          but also the systems, relationships, incentives, and power
+          dynamics that shape what becomes possible.
+        </p>
+
+        <div class="practice-statement">
+
+          <p>
+            The goal is not simply to teach development concepts.
+            It is to create space for practitioners to examine how
+            those concepts behave when they encounter real institutions,
+            real constraints, real relationships, and real communities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+
+    <section class="section alt">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>
+            Learning that starts with harder questions.
+          </h2>
+
+          <p class="lead">
+            The Practice School will encourage practitioners to move
+            beyond technical answers and examine the systems that
+            surround development and humanitarian decisions.
+          </p>
+
+        </div>
+
+
+        <div class="grid">
+
+          <article class="card">
+
+            <span class="card-tag">
+              Power
+            </span>
+
+            <h3>
+              Who gets to decide?
+            </h3>
+
+            <p>
+              Examining where authority sits, whose priorities shape
+              decisions, and how formal and informal power operate
+              within development systems.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Knowledge
+            </span>
+
+            <h3>
+              Whose expertise counts?
+            </h3>
+
+            <p>
+              Exploring how institutional knowledge, professional
+              expertise, lived experience, and community knowledge
+              are valued differently within decision-making.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Resources
+            </span>
+
+            <h3>
+              Who controls what becomes possible?
+            </h3>
+
+            <p>
+              Understanding how financing, donor requirements,
+              organizational incentives, and resource control influence
+              priorities and available choices.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Participation
+            </span>
+
+            <h3>
+              Is participation the same as influence?
+            </h3>
+
+            <p>
+              Looking beyond consultation and representation to examine
+              whether communities and local actors have meaningful
+              influence over decisions.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Systems
+            </span>
+
+            <h3>
+              What surrounds the problem?
+            </h3>
+
+            <p>
+              Using systems thinking to examine relationships,
+              incentives, constraints, feedback, unintended consequences,
+              and interdependence.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Accountability
+            </span>
+
+            <h3>
+              Who is accountable to whom?
+            </h3>
+
+            <p>
+              Exploring how accountability moves between communities,
+              organizations, donors, governments, partners, and
+              institutional systems.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEARNING AREAS -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>
+            Emerging Learning Areas
+          </h2>
+
+          <p class="lead">
+            The School is currently in development. Initial learning
+            areas are expected to draw from the core questions and
+            practice areas that shape Pathways Consulting's work.
+          </p>
+
+        </div>
+
+
+        <div class="grid">
+
+          <article class="card">
+
+            <span class="card-tag">
+              Localization
+            </span>
+
+            <h3>
+              Localization & Locally Led Development
+            </h3>
+
+            <p>
+              Moving beyond localization language to examine power,
+              resources, authority, partnership, accountability,
+              and community influence in practice.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Systems
+            </span>
+
+            <h3>
+              Systems Thinking & Power Analysis
+            </h3>
+
+            <p>
+              Understanding how relationships, incentives, institutions,
+              funding, and power shape complex development and
+              humanitarian environments.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Communities
+            </span>
+
+            <h3>
+              Community-Centered Practice
+            </h3>
+
+            <p>
+              Exploring what changes when community knowledge,
+              experience, priorities, and decision-making power
+              are treated as central to development practice.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Partnerships
+            </span>
+
+            <h3>
+              Equitable Partnerships
+            </h3>
+
+            <p>
+              Examining partnership beyond organizational roles to
+              understand how trust, resources, decision-making,
+              accountability, and institutional power shape relationships.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Leadership
+            </span>
+
+            <h3>
+              Humanitarian Leadership & Complexity
+            </h3>
+
+            <p>
+              Exploring leadership within interconnected crises,
+              uncertainty, institutional constraints, and changing
+              systems of humanitarian action.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Learning
+            </span>
+
+            <h3>
+              Facilitation & Organizational Learning
+            </h3>
+
+            <p>
+              Using reflection, dialogue, participatory methods,
+              systems tools, and facilitated sense-making to help
+              organizations learn from experience and adapt practice.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEARNING APPROACH -->
+
+    <section class="section alt">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <h2>
+            Designed for applied learning.
+          </h2>
+
+          <p class="lead">
+            The Practice School is being designed around a learning
+            philosophy that connects ideas to the realities practitioners
+            encounter in organizations, partnerships, communities,
+            and complex systems.
+          </p>
+
+        </div>
+
+
+        <div class="grid">
+
+          <article class="card">
+
+            <span class="card-tag">
+              Practice-Grounded
+            </span>
+
+            <h3>
+              Start with real problems
+            </h3>
+
+            <p>
+              Learning will be grounded in the tensions, choices,
+              trade-offs, and uncertainties practitioners actually
+              encounter rather than idealized models alone.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Reflective
+            </span>
+
+            <h3>
+              Question assumptions
+            </h3>
+
+            <p>
+              Participants will be encouraged to examine the assumptions,
+              power dynamics, incentives, and institutional structures
+              shaping their own practice.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="card-tag">
+              Applied
+            </span>
+
+            <h3>
+              Leave with something usable
+            </h3>
+
+            <p>
+              Learning experiences will aim to connect reflection with
+              practical tools, questions, frameworks, and approaches
+              participants can take back into their own work.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="content-width" style="margin-top: 44px;">
+
+          <p>
+            As the School develops, learning formats may include:
+          </p>
+
+          <div class="pill-list">
+
+            <span class="pill">
+              Short Courses
+            </span>
+
+            <span class="pill">
+              Applied Workshops
+            </span>
+
+            <span class="pill">
+              Case-Based Learning
+            </span>
+
+            <span class="pill">
+              Practitioner Tools
+            </span>
+
+            <span class="pill">
+              Reflective Exercises
+            </span>
+
+            <span class="pill">
+              Facilitated Learning
+            </span>
+
+            <span class="pill">
+              Cohort-Based Learning
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMING SOON -->
+
+    <section class="section dark">
+
+      <div class="container">
+
+        <div class="coming-soon">
+
+          <div class="coming-soon-label">
+            Coming in 2027
+          </div>
+
+          <h2>
+            Pathways Development Practice School is currently in development.
+          </h2>
+
+          <p class="big-line">
+            The School is being built intentionally, with a focus on
+            practice-grounded learning that is useful to practitioners
+            navigating development, humanitarian action, civil society,
+            policy, and social change.
+          </p>
+
+          <p>
+            Courses, learning experiences, and practitioner resources
+            will be introduced as the School continues to take shape.
+          </p>
+
+          <div class="button-row">
+
+            <a
+              class="button button-primary"
+              href="mailto:pathwaysconsultllc@gmail.com?subject=Pathways%20Development%20Practice%20School"
+            >
+              Express Interest
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="../index.html"
+            >
+              Back to Pathways Consulting
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      &copy; 2026 Anab Mohamed / Pathways Consulting LLC.
+      All rights reserved.
+
+      <br />
+
+      <a href="mailto:pathwaysconsultllc@gmail.com">
+        pathwaysconsultllc@gmail.com
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://www.linkedin.com/in/anabm/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      &nbsp;|&nbsp;
+
+      <a
+        href="https://substack.com/@pathwaysconsultllc"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack
+      </a>
+
+    </p>
+
+  </footer>
+
+</body>
+</html>
